@@ -1,4 +1,6 @@
 #!/bin/bash
+export LANG=C.UTF-8
+export LC_ALL=C.UTF-8
 
 # Lister toutes les VMs KVM (pas les containers LXC)
 for vmid in $(qm list | awk 'NR>1 {print $1}'); do
